@@ -1,12 +1,10 @@
 import React from 'react';
-import { View, Text, ImageBackground, TouchableOpacity, Dimensions } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-swiper';
 import { TutorialStyles } from '../styles/TutorialStyles';
 import { useNavigation } from '@react-navigation/native';
 
 const Tutorial = () => {
-
   const navigation = useNavigation();
 
   const handleNavigateToLogin = () => {
@@ -15,91 +13,52 @@ const Tutorial = () => {
 
   const tutorialData = [
     (
-      <LinearGradient
-        key={1}
-        colors={['#D9E8F5', '#91BED4']}
-        style={TutorialStyles.backgroundImage}
-      >
-        <ImageBackground
-          source={require("../../assets/home.jpeg")}
+      <View style={TutorialStyles.container}>
+        <Image
+          source={require("../../assets/tutorial1.jpg")}
           style={TutorialStyles.backgroundImage}
+        />
+        <Text style={TutorialStyles.tutorialTitle}>Crie eventos locais</Text>
+        <Text style={TutorialStyles.tutorialDescription}>Inicie um evento de limpeza, reciclagem ou até mesmo palestra de conscientização</Text>
+        <TouchableOpacity
+          style={TutorialStyles.buttonSkip}
+          onPress={handleNavigateToLogin}
         >
-          <View style={TutorialStyles.container}>
-            <TouchableOpacity
-              style={TutorialStyles.buttonSkip}
-              onPress={handleNavigateToLogin}
-            >
-              <Text style={TutorialStyles.buttonTextSkip}>Pular</Text>
-            </TouchableOpacity>
-          </View>
-        </ImageBackground>
-      </LinearGradient>
+          <Text style={TutorialStyles.buttonTextSkip}>Pular</Text>
+        </TouchableOpacity>
+      </View>
     ),
     (
-      <LinearGradient
-        key={1}
-        colors={['#D9E8F5', '#91BED4']}
-        style={TutorialStyles.backgroundImage}
-      >
-        <ImageBackground
-          key={2}
-          source={require("../../assets/home.jpeg")}
+      <View style={TutorialStyles.container}>
+        <Image
+          source={require("../../assets/tutorial2.jpg")}
           style={TutorialStyles.backgroundImage}
+        />
+       <Text style={TutorialStyles.tutorialTitle}>Ganhe selos de participação</Text>
+       <Text style={TutorialStyles.tutorialDescription}>Eventos criados pela comunidade te darão selos que serão exibidos em seu perfil</Text>
+        <TouchableOpacity
+          style={TutorialStyles.buttonSkip}
+          onPress={handleNavigateToLogin}
         >
-          <View style={TutorialStyles.container}>
-            <TouchableOpacity
-              style={TutorialStyles.buttonSkip}
-              onPress={handleNavigateToLogin}
-            >
-              <Text style={TutorialStyles.buttonTextSkip}>Pular</Text>
-            </TouchableOpacity>
-          </View>
-        </ImageBackground>
-      </LinearGradient>
+          <Text style={TutorialStyles.buttonTextSkip}>Pular</Text>
+        </TouchableOpacity>
+      </View>
     ),
     (
-      <LinearGradient
-        key={1}
-        colors={['#D9E8F5', '#91BED4']}
-        style={TutorialStyles.backgroundImage}
-      >
-        <ImageBackground
-          key={2}
-          source={require("../../assets/home.jpeg")}
+      <View style={TutorialStyles.container}>
+        <Image
+          source={require("../../assets/tutorial3.jpg")}
           style={TutorialStyles.backgroundImage}
+        />
+       <Text style={TutorialStyles.tutorialTitle}>Monitore o seu evento</Text>
+       <Text style={TutorialStyles.tutorialDescription}>Você receberá notificações dos usuários participantes do evento e poderá acompanhar todo o progresso</Text>
+        <TouchableOpacity
+          style={TutorialStyles.button}
+          onPress={handleNavigateToLogin}
         >
-          <View style={TutorialStyles.container}>
-            <TouchableOpacity
-              style={TutorialStyles.buttonSkip}
-              onPress={handleNavigateToLogin}
-            >
-              <Text style={TutorialStyles.buttonTextSkip}>Pular</Text>
-            </TouchableOpacity>
-          </View>
-        </ImageBackground>
-      </LinearGradient>
-    ),
-    (
-      <LinearGradient
-        key={1}
-        colors={['#D9E8F5', '#91BED4']}
-        style={TutorialStyles.backgroundImage}
-      >
-        <ImageBackground
-          key={2}
-          source={require("../../assets/home.jpeg")}
-          style={TutorialStyles.backgroundImage}
-        >
-          <View style={TutorialStyles.container}>
-            <TouchableOpacity
-              style={TutorialStyles.button}
-              onPress={handleNavigateToLogin}
-            >
-              <Text style={TutorialStyles.buttonText}>Entrar</Text>
-            </TouchableOpacity>
-          </View>
-        </ImageBackground>
-      </LinearGradient>
+          <Text style={TutorialStyles.buttonText}>Entrar</Text>
+        </TouchableOpacity>
+      </View>
     ),
   ];
 
@@ -109,8 +68,8 @@ const Tutorial = () => {
         style={TutorialStyles.wrapper}
         showsButtons={false}
         loop={false}
-        dotColor="#D9E8F5"
-        activeDotColor="#3ECD95"
+        dotColor="#EAEAFF"
+        activeDotColor="#317F54"
       >
         {tutorialData.map((slide, index) => (
           <View key={index} style={TutorialStyles.slide}>

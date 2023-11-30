@@ -3,36 +3,67 @@ import { StyleSheet, Text, View, TouchableOpacity, Dimensions } from 'react-nati
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useFonts } from "expo-font";
 import Tutorial from './src/pages/Tutorial';
 import Perfil from './src/pages/Perfil';
 import Home from './src/pages/Home';
 import Login from './src/pages/Login'
+import CreateAccount from './src/pages/CreateAccount.js'
+import { FontFamily } from "./GlobalStyle.js";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 const { width } = Dimensions.get('window');
 
+
 function App() {
+
+  const [fontsLoaded, error] = useFonts({
+    "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+    "Poppins-Medium": require("./assets/fonts/Poppins-Medium.ttf"),
+    "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
+  });
+
+  if (!fontsLoaded && !error) {
+    return null;
+  }
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Tutorial">
         <Stack.Screen
           name="Tutorial"
           component={Tutorial}
-          options={{ 
-            title: 'Tutorial Screen', 
+          options={{
+            title: 'Tutorial Screen',
             headerShown: false
           }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="Login"
           component={Login}
-          options={{ 
-            title: 'Login', 
+          options={{
+            title: 'Login',
             headerShown: false
           }}
         />
          <Stack.Screen
+          name="CreateAccount"
+          component={CreateAccount}
+          options={{
+            headerTitle: "",
+            headerShown: true,
+            headerTransparent: true,
+            headerBlurEffect: "light",
+            headerTintColor: "#317F54",
+            headerBackTitleVisible: false,
+            headerTitleAlign: "center",
+            headerTitleStyle: {
+              fontFamily: FontFamily.poppinsMedium,
+            },
+          }}
+        />
+        <Stack.Screen
           name="Tabs"
           component={Tabs}
           options={{ headerShown: false }}
@@ -91,7 +122,7 @@ const Tabs = () => {
 //           tabBarLabel: "Perfil",
 //         }}
 //       />
-      
+
 //     </Tab.Navigator>
 //   );
 // };

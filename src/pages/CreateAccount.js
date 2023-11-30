@@ -2,28 +2,21 @@ import React from 'react';
 import { View, Image, Text, TextInput, TouchableOpacity, KeyboardAvoidingView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import logo from '../../assets/ecoLocalLogo.png';
-import styles from '../styles/LoginStyles';
+import styles from '../styles/CreateAccountStyles';
 
-const Login = ({ navigation }) => {
 
-  const handleLogin = () => {
-    navigation.navigate("Tabs");
-  };
+const CreateAccount = ({ navigation }) => {
 
-  const handleForgotPassword = () => {
-    navigation.navigate("PasswordReset");
-  };
-
-  const handleCreateAccount = () => {
-    navigation.navigate("CreateAccount");
-  };
+const handleCreateAccount = () => {
+  navigation.navigate("Login");
+};
   
   return (
     <KeyboardAvoidingView
     behavior={Platform.OS === "ios" ? "padding" : "height"}
     style={{ flex: 1 }}
   >
-    <View style={styles.loginContainer}>
+    <View style={styles.container}>
       <LinearGradient
         colors={['rgba(130, 191, 65, 0.66)', 'rgba(175.98, 205.06, 165.76, 0)']}
         style={styles.greenBackground}
@@ -34,8 +27,14 @@ const Login = ({ navigation }) => {
         <Image style={styles.logo} source={logo} />
       </LinearGradient>
 
-      <View style={styles.loginForm}>
-        <Text style={styles.welcomeText}>Bem vindo!</Text>
+      <View style={styles.createAccountForm}>
+        <Text style={styles.createAccountText}>Criar uma conta</Text>
+        <View style={styles.inputContainer}>
+          <Text style={styles.inputLabel}>Nome completo</Text>
+          <View style={styles.inputField}>
+            <TextInput style={styles.inputValue} placeholder="Nome Sobrenome" />
+          </View>
+        </View>
         <View style={styles.inputContainer}>
           <Text style={styles.inputLabel}>E-mail</Text>
           <View style={styles.inputField}>
@@ -44,26 +43,23 @@ const Login = ({ navigation }) => {
         </View>
         <View style={styles.inputContainer}>
           <Text style={styles.inputLabel}>Senha</Text>
-          <View style={styles.passwordField}>
-            <TextInput style={styles.passwordValue} placeholder="***************" secureTextEntry={true} />
+          <View style={styles.inputField}>
+            <TextInput style={styles.inputValue} placeholder="***************" secureTextEntry={true} />
           </View>
         </View>
-        <TouchableOpacity style={styles.forgotPassword} onPress={handleForgotPassword}>
-        <Text style={styles.forgotPassword}>Esqueceu sua senha?</Text>
-        </TouchableOpacity>
+        
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-            <Text style={styles.buttonTextLogin}>Entrar</Text>
-          </TouchableOpacity>
+        
           <TouchableOpacity style={styles.createAccountButton} onPress={handleCreateAccount}>
             <Text style={styles.buttonTextCriarConta}>Criar Conta</Text>
             
           </TouchableOpacity>
         </View>
       </View>
+
     </View>
     </KeyboardAvoidingView>
   );
 };
 
-export default Login;
+export default CreateAccount;
