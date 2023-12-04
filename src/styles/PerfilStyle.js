@@ -24,6 +24,12 @@ const PerfilStyle = StyleSheet.create({
         textAlign: 'center',
         paddingHorizontal: 20,
       },
+
+
+      containerImagem:{
+        backgroundColor: 'black',
+        width: '50%',
+      }
     });
 
 export default PerfilStyle; 

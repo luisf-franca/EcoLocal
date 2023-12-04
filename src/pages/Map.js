@@ -3,9 +3,9 @@ import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import * as Location from 'expo-location';
 import userMarker from '../../assets/userMarker.png';
-import styles from '../styles/HomeStyles';
+import styles from '../styles/MapStyles';
 
-const Home = () => {
+const Map = () => {
   const [location, setLocation] = useState(null);
   const mapViewRef = useRef(null);
   const { width, height } = Dimensions.get('window');
@@ -35,7 +35,6 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Eventos próximos</Text>
       {location && (
         <MapView
           style={styles.map}
@@ -67,12 +66,17 @@ const Home = () => {
               />
             </View>
           </Marker>
+
         </MapView>
       )}
-      <Text style={styles.subtitle}>Crie um evento</Text>
-      {/* Aqui você pode adicionar o botão ou formulário para criar um evento */}
     </View>
+  
   );
+  const styles = StyleSheet.create({
+    map:{
+      marginTop: 10,
+    }
+  });
 };
 
-export default Home;
+export default Map;

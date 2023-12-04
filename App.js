@@ -6,9 +6,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useFonts } from "expo-font";
 import Tutorial from './src/pages/Tutorial';
 import Perfil from './src/pages/Perfil';
-import Home from './src/pages/Home';
+import Map from './src/pages/Map.js';
 import Login from './src/pages/Login'
+import eventos from './src/pages/eventos.js';
 import CreateAccount from './src/pages/CreateAccount.js'
+import CreateEvento from './src/pages/CreateEvento.js'
 import { FontFamily } from "./GlobalStyle.js";
 
 const Stack = createStackNavigator();
@@ -63,38 +65,73 @@ function App() {
             },
           }}
         />
-        <Stack.Screen
+       <Stack.Screen
+          name="Eventos"
+          component={eventos}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="Perfil"
+          component={Perfil}
+          options={{ headerShown: false }}
+        />
+          <Stack.Screen
+          name="Map"
+          component={Map}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="CreateEvento"
+          component={CreateEvento}
+          options={{ headerShown: false }}
+        />
+        {/* <Stack.Screen
           name="Tabs"
           component={Tabs}
           options={{ headerShown: false }}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-const Tabs = () => {
 
-  return (
-    <Tab.Navigator>
-      <Tab.Screen
-        name="Home"
-        component={Home}
-        options={{
-          headerShown: false,
-          tabBarLabel: "Home",
-        }}
-      />
-      <Tab.Screen
-        name="Perfil"
-        component={Perfil}
-        options={{
-          headerShown: false,
-          tabBarLabel: "Perfil",
-        }}
-      />
-    </Tab.Navigator>
-  );
-};
+
+
+
+
+
+
+// const Tabs = () => {
+
+//   return (
+//     <Tab.Navigator>
+//       <Tab.Screen
+//         name="CreateEvento"
+//         component={CreateEvento}
+//         options={{
+//           headerShown: false,
+//           tabBarLabel: "CreateEvento",
+//         }}
+//       />
+//        <Tab.Screen
+//         name="Eventos"
+//         component={eventos}
+//         options={{
+//           headerShown: false,
+//           tabBarLabel: "Eventos",
+//         }}
+//       />
+//       <Tab.Screen
+//         name="Perfil"
+//         component={Perfil}
+//         options={{
+//           headerShown: false,
+//           tabBarLabel: "Perfil",
+//         }}
+//       />
+//     </Tab.Navigator>
+//   );
+// };
 
 
 // const CustomTabBar = ({ state, descriptors, navigation, userType }) => {

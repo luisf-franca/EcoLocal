@@ -7,7 +7,7 @@ import styles from '../styles/LoginStyles';
 const Login = ({ navigation }) => {
 
   const handleLogin = () => {
-    navigation.navigate("Tabs");
+    navigation.navigate("Eventos");
   };
 
   const handleForgotPassword = () => {
