@@ -12,7 +12,6 @@ const Map = () => {
 
   const vw = width / 100;
   const vh = height / 100;
-
   useEffect(() => {
     getLocation();
   }, []);

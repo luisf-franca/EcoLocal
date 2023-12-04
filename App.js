@@ -68,22 +68,66 @@ function App() {
        <Stack.Screen
           name="Eventos"
           component={eventos}
-          options={{ headerShown: false }}
+          options={{
+            headerTitle: "",
+            headerShown: false,
+            headerTransparent: true,
+            headerBlurEffect: "light",
+            headerTintColor: "#317F54",
+            headerBackTitleVisible: false,
+            headerTitleAlign: "center",
+            headerTitleStyle: {
+              fontFamily: FontFamily.poppinsMedium,
+            },
+          }}
         />
          <Stack.Screen
           name="Perfil"
           component={Perfil}
-          options={{ headerShown: false }}
+          options={{
+            headerTitle: "",
+            headerShown: true,
+            headerTransparent: true,
+            headerBlurEffect: "light",
+            headerTintColor: "#317F54",
+            headerBackTitleVisible: false,
+            headerTitleAlign: "center",
+            headerTitleStyle: {
+              fontFamily: FontFamily.poppinsMedium,
+            },
+          }}
         />
           <Stack.Screen
           name="Map"
           component={Map}
-          options={{ headerShown: false }}
+          options={{
+            headerTitle: "",
+            headerShown: true,
+            headerTransparent: true,
+            headerBlurEffect: "light",
+            headerTintColor: "#317F54",
+            headerBackTitleVisible: false,
+            headerTitleAlign: "center",
+            headerTitleStyle: {
+              fontFamily: FontFamily.poppinsMedium,
+            },
+          }}
         />
          <Stack.Screen
           name="CreateEvento"
           component={CreateEvento}
-          options={{ headerShown: false }}
+          options={{
+            headerTitle: "",
+            headerShown: true,
+            headerTransparent: true,
+            headerBlurEffect: "light",
+            headerTintColor: "#317F54",
+            headerBackTitleVisible: false,
+            headerTitleAlign: "center",
+            headerTitleStyle: {
+              fontFamily: FontFamily.poppinsMedium,
+            },
+          }}
         />
         {/* <Stack.Screen
           name="Tabs"

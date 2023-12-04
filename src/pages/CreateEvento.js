@@ -3,7 +3,7 @@ import { View, Text, Image, Button, TouchableOpacity, StyleSheet, Dimensions } f
 
 
 
-const CreateEvento = ({navigation}) => {
+const CreateEvento = ({ navigation }) => {
 
     const handleMap = () => {
         navigation.navigate("Map");
@@ -19,12 +19,12 @@ const CreateEvento = ({navigation}) => {
 
             <View style={styles.containerEventosTipos}>
                 <Text style={styles.containerEventosTiposTexto1}>Coleta seletiva</Text>
-                <Text style={styles.containerEventosTiposTexto}>Limpeza na Praça</Text>
+                <Text style={styles.containerEventosTiposTexto}>Limpeza na praça</Text>
             </View>
 
             <View style={styles.containerEventosTipos} >
-                <Text style={styles.containerEventosTiposTexto}>Palestra de conscienTizção</Text>
-                <Text style={styles.containerEventosTiposTexto}>Limpeza na Praça</Text>
+                <Text style={styles.containerEventosTiposTexto}>Palestra de conscientização</Text>
+                <Text style={styles.containerEventosTiposTexto}>Limpeza na praça</Text>
             </View>
 
 
@@ -32,8 +32,8 @@ const CreateEvento = ({navigation}) => {
                 <Text style={styles.containerEventosTexto}>Local</Text>
 
                 <View style={styles.containerEventosLocal}>
-                <TouchableOpacity onPress={handleMap}>
-                    <Text>Local do evento</Text>
+                    <TouchableOpacity onPress={handleMap}>
+                        <Text>Local do evento</Text>
                     </TouchableOpacity>
                 </View>
 
@@ -58,9 +58,9 @@ const CreateEvento = ({navigation}) => {
             </View>
 
             <View style={styles.containerEventosCriarBotton}>
-                
+
                 <Text style={styles.containerEventosCriarBottonTexto}>Criar Eventos</Text>
-               
+
             </View>
 
 
@@ -70,7 +70,8 @@ const CreateEvento = ({navigation}) => {
 const styles = StyleSheet.create({
     containerEventos: {
         marginTop: '30%',
-        paddingLeft: "10%",
+        maxWidth: '90%',
+        marginHorizontal: '5%',
 
     },
     containerEventosTexto: {
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
     },
     containerEventosTiposTexto1: {
         padding: 10,
-        backgroundColor: '#009a00',
+        backgroundColor: '#317F54',
         borderRadius: 10,
         marginRight: 20,
         marginBottom: 10,
@@ -128,21 +129,22 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
 
- 
-    containerEventosCriarBotton:{
+
+    containerEventosCriarBotton: {
         padding: 15,
-        backgroundColor: '#009a00',
+        backgroundColor: '#317F54',
         width: '90%',
         marginTop: 10,
         borderRadius: 20,
-    }, 
+    },
 
-    containerEventosCriarBottonTexto:{
+    containerEventosCriarBottonTexto: {
         color: 'white',
-        textAlign:  'center',
+        textAlign: 'center',
         fontWeight: 'bold',
         fontSize: 20,
     }
-// mexe de boa ai vou caçar outro cl ali ksksk 
+
 });
+
 export default CreateEvento;

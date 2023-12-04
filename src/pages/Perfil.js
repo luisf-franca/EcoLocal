@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
   },
   progressBar: {
     height: '100%',
-    backgroundColor: '#27ae90', // Cor da barra preenchida
+    backgroundColor: '#317F54', // Cor da barra preenchida
   },
   progressText: {
 
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   userName: {
     fontSize: 15,
     marginTop: 10,
-    color:'#27ae90'
+    color:'#317F54'
   },
   buttonContainer: {
     height: 90,
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     marginLeft: 20,
     padding: 10,
-    backgroundColor: '#d5e4c9',
+    backgroundColor: 'rgba(130, 191, 65, 0.15)',
 
   },
   texto: {

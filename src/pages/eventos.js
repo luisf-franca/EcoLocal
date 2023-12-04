@@ -43,7 +43,7 @@ function PaginaEventos({ navigation }) {
 
         <TouchableOpacity style={styles.criarEvento} onPress={handleEvento}>
         
-          <Text>Criar novo evento</Text>
+          <Text style={styles.criarEventoText}>Criar novo evento</Text>
         </TouchableOpacity>
 
         <View style={styles.containerEventos}>
@@ -61,7 +61,7 @@ function PaginaEventos({ navigation }) {
             <View style={styles.conteinerBairro}>
               <Text style={styles.textoBairro}> Várzea</Text>
               <View style={styles.conteinerHoras}>
-                <Text style={styles.textoHoras} >16 hours</Text>
+                <Text style={styles.textoHoras} >3 horas</Text>
               </View>
             </View>
           </View>
@@ -83,7 +83,7 @@ function PaginaEventos({ navigation }) {
             <View style={styles.conteinerBairro}>
               <Text style={styles.textoBairro}> Várzea</Text>
               <View style={styles.conteinerHoras}>
-                <Text style={styles.textoHoras} >16 hours</Text>
+                <Text style={styles.textoHoras} >8 horas</Text>
               </View>
             </View>
           </View>
@@ -105,7 +105,7 @@ function PaginaEventos({ navigation }) {
             <View style={styles.conteinerBairro}>
               <Text style={styles.textoBairro}> UNA </Text>
               <View style={styles.conteinerHoras}>
-                <Text style={styles.textoHoras} >16 hours</Text>
+                <Text style={styles.textoHoras} >16 horas</Text>
               </View>
             </View>
           </View>
@@ -127,7 +127,7 @@ function PaginaEventos({ navigation }) {
             <View style={styles.conteinerBairro}>
               <Text style={styles.textoBairro}> Várzea</Text>
               <View style={styles.conteinerHoras}>
-                <Text style={styles.textoHoras} >16 hours</Text>
+                <Text style={styles.textoHoras} >1 hora</Text>
               </View>
             </View>
           </View>
@@ -171,8 +171,15 @@ const styles = StyleSheet.create({
 
   criarEvento:{
     marginLeft: '6%',
-    fontSize: 35,
     marginTop: 10,
+  },
+
+  criarEventoText: {
+    color: '#317F54',
+    marginBottom: -15,
+    fontSize: 18,
+    textAlign: 'right',
+    marginRight: 25
   },
 
   icon: {
@@ -237,7 +244,7 @@ const styles = StyleSheet.create({
 
   },
   textoUsuario: {
-    color: '#27ae90',
+    color: '#317F54',
   },
 
   conteinerBairro: {
@@ -251,7 +258,7 @@ const styles = StyleSheet.create({
   },
 
   conteinerHoras: {
-    backgroundColor: ' rgba(0, 0, 0, 0.2)',
+    backgroundColor: ' rgba(0, 0, 0, 0.07)',
     borderRadius: 10,
     padding: 1,
     paddingLeft: 7,
@@ -259,7 +266,7 @@ const styles = StyleSheet.create({
   },
 
   textoHoras: {
-    color: '#27ae90',
+    color: '#317F54',
   }
 
 
