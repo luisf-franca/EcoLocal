@@ -72,11 +72,8 @@ const Map = () => {
     </View>
   
   );
-  const styles = StyleSheet.create({
-    map:{
-      marginTop: 10,
-    }
-  });
+
 };
+
 
 export default Map;
