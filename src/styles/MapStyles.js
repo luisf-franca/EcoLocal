@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
   
 
   container: {
-    flex: 1,
+    display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'top',
     backgroundColor: '#F0F8FF', // Use a cor da paleta aqui
   },
   title: {
@@ -27,8 +27,10 @@ const styles = StyleSheet.create({
   },
   map: {
     width: Dimensions.get('window').width,
-    height: '100%',
-    width: '100%'
+    height: '70%',
+    width: '100%',
+    position: 'absolute',
+    zIndex:10
   },
 });
 

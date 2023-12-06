@@ -21,7 +21,7 @@ container: {
   logo: {
     width: 73 * vw,
     height: 77 * vh,
-    marginTop: - 15 * vh,
+    marginTop: - 18 * vh,
     alignSelf: 'center',
     objectFit: 'contain',
     position: 'absolute'
