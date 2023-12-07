@@ -12,6 +12,7 @@ const Map = () => {
 
   const vw = width / 100;
   const vh = height / 100;
+
   useEffect(() => {
     getLocation();
   }, []);
@@ -34,6 +35,7 @@ const Map = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Eventos próximos</Text>
       {location && (
         <MapView
           style={styles.map}
@@ -65,14 +67,12 @@ const Map = () => {
               />
             </View>
           </Marker>
-
         </MapView>
       )}
+      <Text style={styles.subtitle}>Crie um evento</Text>
+      {/* Aqui você pode adicionar o botão ou formulário para criar um evento */}
     </View>
-  
   );
-
 };
-
 
 export default Map;

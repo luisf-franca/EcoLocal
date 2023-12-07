@@ -26,11 +26,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   map: {
-    width: Dimensions.get('window').width,
-    height: '70%',
+    height: '100%',
     width: '100%',
-    position: 'absolute',
-    zIndex:10
   },
 });
 
